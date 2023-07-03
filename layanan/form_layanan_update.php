@@ -108,7 +108,7 @@
 
             <form method="POST">
                 <div class="form-group">
-                  <label for="kode_software">Kode Layanan</label>
+                  <label for="kode_layanan">Kode Layanan</label>
                   <input type="text" class="form-control" id="kodel" name="kodel" placeholder="Masukan Kode software" value="<?= $kode ?>" >
                 </div>
              

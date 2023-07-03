@@ -25,7 +25,7 @@
 	            <div class="col-auto">
                     <div class="container py-4" >
                         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                            <h1 class="h3 mb-0 text-gray-800">List Transaksi Berjalan</h1>
+                            <h1 class="h3 mb-0 text-gray-800">List Transaksi Selesai</h1>
                         </div>
                     </div>
 	            </div>
@@ -58,7 +58,6 @@
 					      <th scope="col">Alamat</th>
 					      <th scope="col">Layanan</th>
 					      <th scope="col">Harga</th>
-					      <th scope="col">Aksi</th>
 					    </tr>
 			  		</thead>
 			  		<tbody>
@@ -66,7 +65,7 @@
 					require_once "../koneksi.php";
 					$conn = open_connection();
 
-					$query = "SELECT * FROM pesanan";
+					$query = "SELECT * FROM pesananselesai";
 					$hasil = mysqli_query($conn, $query);
 					function tampil_data_table(){
 
@@ -74,18 +73,13 @@
 
 					while($row = mysqli_fetch_assoc($hasil) ){
 						echo "<tr>";
-						echo "<td> $row[order_id] </td>";
-						echo "<td> $row[nama] </td>";
-						echo "<td> $row[email] </td>";
-						echo "<td> $row[nomor] </td>";
-						echo "<td> $row[alamat] </td>";
-						echo "<td> $row[layanan_order] </td>";
-						echo "<td> $row[harga_order] </td>";
-						echo "<td> 
-							<a class='btn btn-sm btn-primary' href='form_order_update.php?order_id=$row[order_id]'><i class='fa fa-edit'></i></a> 
-							<a class='btn btn-sm btn-danger' href='action_order_delete.php?order_id=$row[order_id]' onclick='return confirm(\"Apakah Anda yakin ingin menyelesaikan pesanan ini?\")'><i class='fa fa-check'></i></a>
-							</td>";
-
+						echo "<td> $row[order_selesai] </td>";
+						echo "<td> $row[nama_selesai] </td>";
+						echo "<td> $row[email_selesai] </td>";
+						echo "<td> $row[nomor_selesai] </td>";
+						echo "<td> $row[alamat_selesai] </td>";
+						echo "<td> $row[layanan_selesai] </td>";
+						echo "<td> $row[harga_selesai] </td>";
 						echo "</tr>";
 					}
 					

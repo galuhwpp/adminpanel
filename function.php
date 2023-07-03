@@ -40,4 +40,30 @@
 		}
 		return $list;
 	}
+
+	function get_data_pesanan(){
+		require_once "koneksi.php";
+		$conn = open_connection();
+		$query = "SELECT * FROM pesanan";
+		$hasil = mysqli_query($conn, $query);
+
+		$list = array();
+		while ($row = mysqli_fetch_assoc($hasil)) {
+			$list[ $row['order_id']] = $row['nama'];
+		}
+		return $list;
+	}
+
+	function get_data_pesananselesai(){
+		require_once "koneksi.php";
+		$conn = open_connection();
+		$query = "SELECT * FROM pesananselesai";
+		$hasil = mysqli_query($conn, $query);
+
+		$list = array();
+		while ($row = mysqli_fetch_assoc($hasil)) {
+			$list[ $row['order_selesai']] = $row['nama_selesai'];
+		}
+		return $list;
+	}
 ?>

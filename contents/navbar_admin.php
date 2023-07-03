@@ -19,6 +19,7 @@
             <div class="list-group main-menu">
                 <a href="<?php echo BASE_URL ?>admin/admin.php" class="list-group-item list-group-item-action <?= $halaman == 'admin.php' ? 'active' : '' ; ?>">Dashboard</a>
                 <a href="<?php echo BASE_URL ?>order/order.php" class="list-group-item list-group-item-action <?= $halaman == 'order.php' ? 'active' : '' ; ?>">List Transaksi</a>
+                <a href="<?php echo BASE_URL ?>order_selesai/orderselesai.php" class="list-group-item list-group-item-action <?= $halaman == 'orderselesai.php' ? 'active' : '' ; ?>">List Transaksi Selesai</a>
                 <a href="<?php echo BASE_URL ?>layanan/admin_layanan.php" class="list-group-item list-group-item-action <?= $halaman == 'admin_layanan.php' ? 'active' : '' ; ?>">List Layanan</a>
                 <a href="<?php echo BASE_URL ?>admin/admin_data.php" class="list-group-item list-group-item-action <?= $halaman == 'admin_data.php' ? 'active' : '' ; ?>">Admin</a>
                 <a href="<?php echo BASE_URL ?>logout.php" class="list-group-item list-group-item-action mt-4 <?= $halaman == 'logout.php' ? 'active' : '' ; ?>">Logout</a>
